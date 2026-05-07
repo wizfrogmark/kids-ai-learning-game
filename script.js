@@ -54,6 +54,18 @@ function petByte() {
     setTimeout(() => toast.remove(), 2200);
 }
 
+// NEW: Start Training Byte button handler
+function startFirstMission() {
+    const toast = document.createElement('div');
+    toast.className = 'fixed bottom-8 left-1/2 -translate-x-1/2 bg-indigo-600 text-white shadow-xl px-8 py-4 rounded-3xl flex items-center gap-x-3 z-[300]';
+    toast.innerHTML = `<span class="text-3xl">🤖</span> <span class="font-bold">Let's start with Pattern Detective!</span>`;
+    document.body.appendChild(toast);
+    setTimeout(() => {
+        toast.remove();
+        startPatternGame();
+    }, 900);
+}
+
 // PATTERN DETECTIVE
 let currentOddIndex = -1;
 let patternEmojis = ['🍎', '🍌', '🍓', '🍒', '🍉', '🍑', '🍇', '🍓'];
